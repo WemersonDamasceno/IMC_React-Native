@@ -35,17 +35,17 @@ export default class App extends Component {
 
     if(imc <= 16.9 ){
       s.resultadoText = "Muito abaixo do peso"
-    }else if(imc <18.4 && imc > 17){
+    }else if(imc >= 17 && imc <= 18.4){
       s.resultadoText = "Abaixo do peso"
-    }else if(imc <= 24.9 && imc >= 18.5){
+    }else if(imc >= 18.5 && imc <= 24.9){
       s.resultadoText = "Peso Normal"
-    }else if(imc < 29.9 && imc > 25){
+    }else if(imc >= 25 && imc <= 29.9){
       s.resultadoText = "Acima do peso"  
-    }else if(imc < 34.9 && imc > 30){
+    }else if(imc >= 30 && imc <= 34.9){
       s.resultadoText = "Obesidade Grau I"    
-    }else if(imc < 35 && imc > 40){
+    }else if(imc >= 40 && imc <= 35){
       s.resultadoText = "Obesidade Grau II"    
-    }else{
+    }else if(imc >= 40.1){
       s.resultadoText = "Obesidade Grau III"    
     }
 
@@ -81,7 +81,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
 
   container:{
-    justifyContent: "center",
+    justifyContent:"center",
     display:"flex",
     alignItems:"center",
   },
